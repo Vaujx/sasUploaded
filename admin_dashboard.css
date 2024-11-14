@@ -1,0 +1,239 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f4f8;
+    color: #333;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2, h3 {
+    color: #8080c9;
+  }
+
+  label {
+    font-size: 16px;
+    color: #000080;
+    margin-bottom: 5px;
+  }
+
+  .two-column-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
+
+  input, select {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    padding: 0 10px;
+    transition: border-color 0.3s ease;
+  }
+
+  input:focus, select:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+
+  #capacity {
+    cursor: text;
+  }
+
+  #service {
+    cursor: pointer;
+  }
+
+  #submit {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    background-color: #000080;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #submit:hover {
+    background-color: #0000b3;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  th, td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #9494ec;
+    color: black;
+    font-weight: bold;
+  }
+
+  .col1 {
+    background-color: #f8f9fa;
+  }
+
+  .col2 {
+    background-color: #ffffff;
+  }
+
+  button {
+    height: 36px;
+    border: 1px solid #000080;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: #000080;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #000080;
+    color: white;
+  }
+
+  .error {
+    color: #ff0000;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffe6e6;
+    margin-bottom: 20px;
+  }
+
+  .success {
+    color: #4CAF50;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e6ffe6;
+    margin-bottom: 20px;
+  }
+
+  #logout, #cpb {
+    height: 40px;
+    border: 1px solid #000080;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    padding: 5px 15px;
+    background-color: #000080;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  #logout:hover, #cpb:hover {
+    background-color: white;
+    color: #000080;
+  }
+
+  .slot-available {
+    background-color: #e6ffe6;
+  }
+
+  .slot-almost-full {
+    background-color: #fff5e6;
+  }
+
+  .slot-full {
+    background-color: #ffe6e6;
+  }
+
+  .edit-form {
+    display: none;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  .edit-form button {
+    margin-top: 10px;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  #change-password-popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  #change-password-popup h3 {
+    margin-top: 0;
+    color: #000080;
+  }
+
+  #change-password-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #change-password-popup button {
+    margin-top: 10px;
+  }
+
+  .popup-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    .two-column-form {
+      grid-template-columns: 1fr;
+    }
+
+    .full-width {
+      grid-column: span 1;
+    }
+  }

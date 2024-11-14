@@ -1,0 +1,71 @@
+body {
+    background-color:rgb(74, 157, 230);
+    font-family: Trebuchet MS, san-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    height: 1300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.two-column-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin: 0 auto;
+    border-radius:5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+input, select, textarea{
+    height: 30px;
+    border: 1px solid grey;
+    border-radius:5px;
+    font-family:Trebuchet MS, san-serif; 
+    font-size: 16px;
+}
+
+input:hover, select:hover, textarea:hover{
+   border: 2px solid navy;
+}
+
+#campus,#sex,#birthdate,#school_type {
+    cursor:pointer;
+}
+
+label {
+    font-size:16px;
+}
+
+#submit {
+    height: 30px;
+    border: 1px solid grey;
+    border-radius:5px;
+    font-family:Trebuchet MS, san-serif; 
+    font-size: 16px;
+    cursor:pointer;
+    }
+#submit:hover {
+    background-color:navy;
+    color:white;
+}

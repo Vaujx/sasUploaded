@@ -1,0 +1,371 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f0f4f8;
+    color: #000000;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #000080;
+    color: #ffffff;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #ffffff;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #ffd700;
+}
+
+.sidebar ul li a svg {
+    margin-right: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 250px;
+}
+
+select {
+    width: 200px;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    border: 1px solid #000080;
+}
+
+select:hover {
+    background-color: #f0f4f8;
+}
+
+option {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+option:hover {
+    background-color: #f0f4f8;
+}
+
+.calendar-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#prevmonth, #nextmonth {
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #000080;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+#prevmonth:hover, #nextmonth:hover {
+    background-color: #ffd700;
+    color: #000080;
+}
+
+.month {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000080;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #e0e0e0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.calendar-header {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #000080;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.calendar-day {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 100px;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.calendar-day:hover {
+    background-color: #ffd700;
+    color: #000080;
+    transform: scale(1.05);
+}
+
+.calendar-day.other-month {
+    background-color: #f9f9f9;
+    color: #999999;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.slot-available { 
+    background-color: #90EE90;
+}
+
+.appointment {
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#slot-popup {
+    background-color: #4a9de6;
+}
+
+#appointments-popup, #history-popup {
+    background-color: #ffed87;
+}
+
+.popup h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #000080;
+    font-size: 24px;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 10px;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000080;
+}
+
+.close-popup:hover {
+    color: #ffd700;
+}
+
+#submit {
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #000080;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #ffd700;
+    color: #000080;
+}
+
+.print {
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    cursor: pointer;
+    background-color: #000080;
+    color: #ffffff;
+    padding: 0 15px;
+    transition: background-color 0.3s ease;
+}
+
+.print:hover {
+    background-color: #ffd700;
+    color: #000080;
+}
+
+.appointment-card, .history-item, .appointment-item {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #eeeeee;
+}
+
+.appointment-card:last-child, .history-item:last-child, .appointment-item:last-child {
+    border-bottom: none;
+}
+
+.appointment-card p, .history-item p, .appointment-item p {
+    margin: 5px 0;
+}
+
+.appointment-card .status {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.appointment-card .status-pending { color: #f39c12; }
+.appointment-card .status-approved { color: #27ae60; }
+.appointment-card .status-declined { color: #e74c3c; }
+
+.appointment-card .actions {
+    margin-top: 10px;
+}
+
+.appointment-card .actions a,
+.appointment-card .actions button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #000080;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.appointment-card .actions a:hover,
+.appointment-card .actions button:hover {
+    background-color: #ffd700;
+    color: #000080;
+}
+
+.no-appointments, .no-history {
+    text-align: center;
+    color: #777777;
+    font-style: italic;
+}
+
+.calendar-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    z-index: 10;
+}
+
+.notification-badge {
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .calendar-day {
+        min-height: 60px;
+    }
+}

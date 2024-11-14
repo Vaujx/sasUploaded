@@ -1,0 +1,117 @@
+#navbar {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    z-index: 1000;
+    height: 10%;
+}
+
+header {
+    background-color:grey;
+    color: white;
+    padding:0;
+    margin:0;
+}
+
+#name1 {
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    letter-spacing: 3px;
+    color: navy;    
+    text-shadow: 2px 2px gold;
+
+}
+
+body {
+    margin: 0;
+    font-family: Trebuchet MS, san-serif;
+    background-color:white;
+}
+
+#register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow to the box */
+    background-color: gold; /* Form box background color */
+    width: 600px; /* Set a width for the form box */
+}
+.name {
+    padding-bottom: 10px;
+}
+
+.email {
+    padding-bottom: 10px;
+}
+
+.pass {
+    padding-bottom: 10px;
+}
+
+.usertype {
+    padding-bottom: 10px;
+}
+
+input {
+    font-family: Trebuchet MS, san-serif;
+    font-size: 16px;    
+    border-radius:10px;
+    border:none;
+    padding: 5px;
+}
+label {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+select {
+    width: 200px; /* Width of the drop-down */
+    padding: 5px; /* Padding inside the drop-down */
+    font-size: 16px; /* Font size for the options */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color */
+    color:black; /* Text color */
+  }
+
+  select:hover {
+    background-color: #e0e0e0; /* Background color when hovering */
+}
+
+option {
+    padding: 10px;
+    background-color: white; /* Background color of options */
+}
+option:hover{
+    background-color: grey;
+}
+
+
+.submit {
+    background-color:white;
+    border: 1px solid grey;
+    width: 100px;
+    padding:5px;
+    font-size: 20px;
+    font-family: Trebuchet MS, san-serif;
+    border-radius:5px;
+    color:black;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: navy;
+    color: white;
+}

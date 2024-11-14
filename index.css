@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: #000080;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #name {
+    margin: 0;
+    letter-spacing: 3px;
+    color: #ffd700;
+    text-shadow: 2px 2px #000080;
+    font-size: 24px;
+  }
+
+  #login, .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+  }
+
+  .container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+  }
+
+  .container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  h2 {
+    color: #000080;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .login-type-switcher {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .login-type-switcher a {
+    color: #000080;
+    text-decoration: none;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .login-type-switcher a:hover {
+    background-color: rgba(0, 0, 128, 0.1);
+  }
+
+  .login-type-switcher a.active {
+    font-weight: bold;
+  }
+
+  .login-type-switcher::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 33.33%;
+    background-color: #ffd700;
+    transition: all 0.4s ease;
+  }
+
+  .login-type-switcher[data-active="student"]::after {
+    left: 0;
+  }
+
+  .login-type-switcher[data-active="staff"]::after {
+    left: 33.33%;
+  }
+
+  .login-type-switcher[data-active="admin"]::after {
+    left: 66.66%;
+  }
+  input {
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000080;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+  }
+
+  .submit {
+    background-color: #000080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+
+  .submit:hover {
+    background-color: #0000b3;
+  }
+
+  .error {
+    color: #ff0000;
+    background-color: #fff0f0;
+    border: 1px solid #ff0000;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .success {
+    color: #008000;
+    background-color: #f0fff0;
+    border: 1px solid #008000;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  a {
+    color: #000080;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #0000b3;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .submit {
+      font-size: 16px;
+    }
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: gold;
+  }
+  button:hover {
+    background-color: white;
+  }
+
+
+  .form-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
